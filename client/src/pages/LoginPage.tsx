@@ -1,5 +1,13 @@
+import NavigationBar from '../components/common/NavigationBar';
+import LoginForm from '../components/LoginForm';
+
 const LoginPage = () => {
-  return <div>로그인 페이지</div>
-}
+  return (
+    <>
+      <NavigationBar />
+      <LoginForm />
+    </>
+  );
+};
 
 export default LoginPage;
