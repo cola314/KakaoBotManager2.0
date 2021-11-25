@@ -1,5 +1,14 @@
+import NavigationBar from '../components/common/NavigationBar';
+import ApplicationsView from '../components/application/ApplicationsView';
+
 const ApplicationsPage = () => {
-  return <div>애플리케이션 목록 페이지</div>;
+  const applications = [{ name: 'Music-Char-Bot' }];
+  return (
+    <>
+      <NavigationBar />
+      <ApplicationsView applications={applications} />
+    </>
+  );
 };
 
 export default ApplicationsPage;
