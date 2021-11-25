@@ -4,13 +4,14 @@ import TextBoxInput from './common/TextBoxInput';
 
 const LoginFormBlock = styled.form`
   margin: 0 auto;
-  margin-top: 9rem;
+  margin-top: 11rem;
   width: 365px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   h2 {
+    margin-bottom: 1.5rem;
     font-size: 3rem;
   }
 `;
