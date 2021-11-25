@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import Button from './common/Button';
+import TextBoxInput from './common/TextBoxInput';
 
 const LoginFormBlock = styled.form`
   margin: 0 auto;
@@ -12,36 +14,17 @@ const LoginFormBlock = styled.form`
     font-size: 3rem;
   }
 `;
-
-const StyledTextInput = styled.input`
-  width: 100%;
-  height: 2.5rem;
-  border-radius: 4px;
-  border: 1px solid #888888;
+const StyledTextBoxInput = styled(TextBoxInput)`
   margin-bottom: 1.25rem;
-  font-size: 1rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-`;
-
-const FormButton = styled.button`
-  cursor: pointer;
-  background: #f7e600;
-  font-size: 1rem;
-  font-weight: bold;
-  width: 100%;
-  height: 2.5rem;
-  border-radius: 4px;
-  border: none;
 `;
 
 const LoginForm = () => {
   return (
     <LoginFormBlock>
       <h2>KakaoBotManager</h2>
-      <StyledTextInput type="text" id="id" placeholder="아이디" />
-      <StyledTextInput type="password" id="id" placeholder="비밀번호" />
-      <FormButton>로그인</FormButton>
+      <StyledTextBoxInput type="text" id="id" placeholder="아이디" />
+      <StyledTextBoxInput type="password" id="password" placeholder="비밀번호" />
+      <Button text="로그인" />
     </LoginFormBlock>
   );
 };
