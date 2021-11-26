@@ -24,7 +24,11 @@ const LoginForm = () => {
     <LoginFormBlock>
       <h2>KakaoBotManager</h2>
       <StyledTextBoxInput type="text" id="id" placeholder="아이디" />
-      <StyledTextBoxInput type="password" id="password" placeholder="비밀번호" />
+      <StyledTextBoxInput
+        type="password"
+        id="password"
+        placeholder="비밀번호"
+      />
       <Button text="로그인" />
     </LoginFormBlock>
   );
