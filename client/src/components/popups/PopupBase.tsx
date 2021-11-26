@@ -22,6 +22,13 @@ const PopupBlock = styled.div`
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
+  label {
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+  }
 `;
 
 const PopupBase = ({ children }: Props) => {

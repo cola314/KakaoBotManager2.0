@@ -12,13 +12,6 @@ const GridForm = styled.form`
     font-size: 1.25rem;
     font-weight: bold;
   }
-  label {
-    font-size: 1.25rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    margin-right: 1.5rem;
-  }
 `;
 const ErrorMessageBlock = styled.span`
   color: #e74c06;

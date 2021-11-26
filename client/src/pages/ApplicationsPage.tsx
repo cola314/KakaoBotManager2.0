@@ -1,5 +1,6 @@
 import NavigationBar from '../components/common/NavigationBar';
 import ApplicationsView from '../components/application/ApplicationsView';
+import AddApplicationPopup from '../components/popups/AddApplicationPopup';
 
 const ApplicationsPage = () => {
   const applications = [{ name: 'Music-Char-Bot' }];
@@ -7,6 +8,7 @@ const ApplicationsPage = () => {
     <>
       <NavigationBar />
       <ApplicationsView applications={applications} />
+      <AddApplicationPopup />
     </>
   );
 };
