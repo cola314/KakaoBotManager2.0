@@ -6,17 +6,31 @@ export enum ButtonSize {
   Standard,
 }
 
+export enum ButtonColor {
+  Yellow,
+  Dark,
+  Red,
+}
+
 type Props = {
   text: string;
   buttonSize?: ButtonSize;
-  black?: boolean;
+  buttonColor?: ButtonColor;
 };
-
-const StyledButton = styled.button<{ buttonSize: ButtonSize; black?: boolean }>`
-  cursor: pointer;
-  background: ${props => (props.black ? '#5e5e5e' : '#f7e600')};
-  color: ${props => (props.black ? '#ffffff' : '#000000')};
+const StyledButton = styled.button<{
+  buttonSize: ButtonSize;
+  buttonColor: ButtonColor;
+}>`
   font-size: 1rem;
+  cursor: pointer;
+  background: ${props =>
+    props.buttonColor === ButtonColor.Dark
+      ? '#5e5e5e'
+      : props.buttonColor === ButtonColor.Red
+      ? '#e74c3c;'
+      : '#f7e600'};
+  color: ${props =>
+    props.buttonColor === ButtonColor.Yellow ? '#000000' : '#ffffff'};
   width: ${props =>
     props.buttonSize === ButtonSize.FillParent
       ? '100%'
@@ -30,9 +44,13 @@ const StyledButton = styled.button<{ buttonSize: ButtonSize; black?: boolean }>`
   border: none;
 `;
 
-const Button = ({ text, buttonSize, ...rest }: Props) => {
+const Button = ({ text, buttonSize, buttonColor, ...rest }: Props) => {
   return (
-    <StyledButton buttonSize={buttonSize ?? ButtonSize.FillParent} {...rest}>
+    <StyledButton
+      buttonSize={buttonSize ?? ButtonSize.FillParent}
+      buttonColor={buttonColor ?? ButtonColor.Yellow}
+      {...rest}
+    >
       {text}
     </StyledButton>
   );

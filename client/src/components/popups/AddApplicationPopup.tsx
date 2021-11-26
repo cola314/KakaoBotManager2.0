@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button, { ButtonSize } from '../common/Button';
+import Button, { ButtonColor, ButtonSize } from '../common/Button';
 import TextBoxInput from '../common/TextBoxInput';
 import PopupBase from './PopupBase';
 
@@ -40,7 +40,11 @@ const AddApplicationPopup = () => {
         <label htmlFor="icon">아이콘</label>
         <IconSelectBlock>
           <IconPreview alt="이미지" src="_" />
-          <Button text="파일 선택" buttonSize={ButtonSize.FitContent} black />
+          <Button
+            text="파일 선택"
+            buttonSize={ButtonSize.FitContent}
+            buttonColor={ButtonColor.Dark}
+          />
           <span>
             PNG, JPG
             <br />
@@ -48,7 +52,11 @@ const AddApplicationPopup = () => {
           </span>
         </IconSelectBlock>
         <ButtonWrapper>
-          <Button text="취소" black buttonSize={ButtonSize.Standard} />
+          <Button
+            text="취소"
+            buttonSize={ButtonSize.Standard}
+            buttonColor={ButtonColor.Dark}
+          />
           <Button text="추가" buttonSize={ButtonSize.Standard} />
         </ButtonWrapper>
       </AddApplicationForm>
